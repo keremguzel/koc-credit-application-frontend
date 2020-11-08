@@ -64,7 +64,7 @@ export default class ApplicationPage extends Component {
                     <Input className={this.state.errors.message === "ID_IS_NOT_VALID" ? "field error" : "field"} errors={this.state.errors.message === "ID_IS_NOT_VALID" && "Id is not valid"} label="Id" type="tel" name="id" placeholder="Id" pattern="[0-9]{11}" onChange={this.onChange}/>
                     <Input className="field" label="Salary" type="tel" name="salary" placeholder="Salary" onChange={this.onChange} pattern="[0-9]*"/>
                     <Input className={this.state.errors.message === "PHONE_NUMBER_NOT_UNIQUE" ? "field error" : "field"} errors={this.state.errors.message === "PHONE_NUMBER_NOT_UNIQUE" && "Phone number is not valid"} label="Phone" pattern="[0-9]{10}" type="tel" name="phone" placeholder="Phone" onChange={this.onChange}/>
-                    <small>Format: 532xxxxxxx</small>
+                    <small style={{marginLeft:"5px"}}>Format: 532xxxxxxx</small>
                     <div className="buttons">
                         <button className="ui orange button" disabled={!buttonIsEnabled}>Submit</button>
                     </div>
