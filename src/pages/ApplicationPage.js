@@ -59,7 +59,7 @@ export default class ApplicationPage extends Component {
                 <form className="ui form" onSubmit={this.submitApplication}>
                     <img src={logo} alt="logo"/>
                     <h1>Credit Application</h1>
-                    <Input className="field" label="First Name" type="text" name="name" placeholder="First Name" onChange={this.onChange} pattern="^[a-zA-ZğüşöçİĞÜŞÖÇ]+$"/>
+                    <Input className="field" label="First Name" type="text" name="name" placeholder="First Name" onChange={this.onChange} pattern="^[a-zA-ZğüşöçİĞÜŞÖÇ' ']+$"/>
                     <Input className="field" label="Last Name" type="text" name="surname" placeholder="Last Name" onChange={this.onChange}  pattern="^[a-zA-ZğüşöçİĞÜŞÖÇ]+$"/>
                     <Input className={this.state.errors.message === "ID_IS_NOT_VALID" ? "field error" : "field"} errors={this.state.errors.message === "ID_IS_NOT_VALID" && "Id is not valid"} label="Id" type="tel" name="id" placeholder="Id" pattern="[0-9]{11}" onChange={this.onChange}/>
                     <Input className="field" label="Salary" type="tel" name="salary" placeholder="Salary" onChange={this.onChange} pattern="[0-9]*"/>
